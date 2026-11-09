@@ -11,6 +11,9 @@ from langchain_classic.agents import (
     create_react_agent,
     AgentExecutor
 )
+
+from langchain.agents import create_agent
+
 from langchain_core.prompts import PromptTemplate
 
 from langchain_tavily import TavilySearch
@@ -80,7 +83,7 @@ def get_weather_data(city: str) -> str:
 # ==========================================
 
 llm = ChatGoogleGenerativeAI(
-    model="gemini-3.8-flash",
+    model="gemini-3.1-flash-lite",
 )
 
 # ==========================================
@@ -122,7 +125,7 @@ tools = [
 # CREATE AGENT
 # ==========================================
 
-agent = create_react_agent(
+agent = create_agent(
     llm=llm,
     tools=tools,
     prompt=prompt

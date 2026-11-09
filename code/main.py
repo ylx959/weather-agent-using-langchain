@@ -70,7 +70,7 @@ def get_weather_data(city: str) -> str:
 # ==========================================
 
 llm = ChatGoogleGenerativeAI(
-    model="gemini-3.8-flash",
+    model="gemini-3.1-flash-lite",# I highly recommand this model(free and fast)
 )
 
 # ==========================================
@@ -133,7 +133,7 @@ agent_executor = AgentExecutor(
 # ==========================================
 
 user_input= (
-        "Find the capital of India "
+        "Find the city  Taichung in Taiwan "
         "and then find its current weather."
     )
 
