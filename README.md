@@ -10,16 +10,13 @@ The project ships with two entry points: a command-line script for quick runs an
 
 ## Built With
 
-| Category | Technology |
-| --- | --- |
-| Language | Python 3.12 |
-| Package manager | [uv](https://docs.astral.sh/uv/) |
-| Agent framework | LangChain (`langchain`, `langchain-classic`, `langchain-core`) |
-| LLM | Google Gemini via `langchain-google-genai` |
-| Web search tool | Tavily via `langchain-tavily` |
-| Weather tool | Weatherstack API via `requests` |
-| Web UI | Streamlit |
-| Configuration | `python-dotenv` |
+- Python 3.12
+- uv
+- LangChain
+- Google Gemini
+- Tavily Search
+- Weatherstack API
+- Streamlit
 
 ## Getting Started
 
@@ -58,7 +55,7 @@ uv run streamlit run app.py   # Web UI
 
 ```text
 weather-search-ai-agent-using-LangChain/
-├── README.md          ← 📍 You are here
+├── README.md          ← You are here
 ├── app.py             # Streamlit web UI for the agent
 ├── main.py            # Command-line demo of the agent
 ├── pyproject.toml     # Project metadata and dependencies (uv)
