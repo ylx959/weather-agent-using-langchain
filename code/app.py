@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import requests
 import streamlit as st
 import certifi
@@ -18,7 +19,8 @@ from langchain_tavily import TavilySearch
 # LOAD ENV VARIABLES
 # ==========================================
 os.environ["SSL_CERT_FILE"] = certifi.where()
-load_dotenv()
+# .env lives in the project root, one level above code/
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 WEATHERSTACK_API_KEY = os.getenv("WEATHERSTACK_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")

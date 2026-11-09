@@ -6,7 +6,7 @@ An AI agent built with LangChain that can search the web and check the live weat
 2. Uses **Weatherstack** to fetch the current temperature, conditions and humidity for a city
 3. Uses **Google Gemini** to reason over the results and write the final answer
 
-The project ships with two entry points: a command-line script for quick runs and a Streamlit web UI for interactive queries.
+The project ships with two entry points: a CLI (`code/main.py`) that runs a built-in example query, and a Streamlit web UI (`code/app.py`) for your own questions.
 
 ## Built With
 
@@ -47,8 +47,8 @@ WEATHERSTACK_API_KEY=your-weatherstack-api-key
 **4. Run**
 
 ```bash
-uv run main.py                # CLI
-uv run streamlit run app.py   # Web UI
+uv run code/main.py                # CLI: runs the built-in example query
+uv run streamlit run code/app.py   # Web UI: opens http://localhost:8501
 ```
 
 ## Project Structure
@@ -56,8 +56,9 @@ uv run streamlit run app.py   # Web UI
 ```text
 weather-search-ai-agent-using-LangChain/
 ├── README.md          ← You are here
-├── app.py             # Streamlit web UI for the agent
-├── main.py            # Command-line demo of the agent
+├── code/
+│   ├── app.py         # Streamlit web UI for the agent
+│   └── main.py        # Command-line demo of the agent
 ├── pyproject.toml     # Project metadata and dependencies (uv)
 ├── uv.lock            # Locked dependency versions
 ├── .python-version    # Python version used by uv (3.12)

@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import certifi
 
 
@@ -22,7 +23,8 @@ from langchain_core.prompts import PromptTemplate
 # LOAD ENV VARIABLES
 # ==========================================
 os.environ["SSL_CERT_FILE"] = certifi.where()
-load_dotenv()
+# .env lives in the project root, one level above code/
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
