@@ -132,11 +132,13 @@ agent_executor = AgentExecutor(
 # RUN
 # ==========================================
 
-response = agent_executor.invoke({
-    "input": (
-        "Find the capital of India"
+user_input= (
+        "Find the capital of India "
         "and then find its current weather."
     )
+
+response = agent_executor.invoke({
+    "input": user_input
 })
 
 print("\n========================")
